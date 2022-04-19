@@ -5,11 +5,31 @@ export async function renderProducts(db, fire) {
 
     querySnapshot.forEach(doc => {
       let product = `
-      <div class="col m-1"  style="background-color: rgb(32, 136, 127);">
-      <div class="row"><h1>${doc.data().name}</h1></div>
-      <div class="row"><h1>${doc.data().price}</h1></div>
-      <div class="row"><h1>${doc.data().description}</h1></div>
+      <div class="col-sm-6 col-md-4 col-lg-4">
+      <div class="box">
+         <div class="option_container">
+            <div class="options">
+               <a href="" class="option1">
+               ${doc.data().name}
+               </a>
+               <a href="" class="option2">
+               Buy Now
+               </a>
+            </div>
+         </div>
+         <div class="img-box">
+            <img src="images/p1.png" alt="">
+         </div>
+         <div class="detail-box">
+            <h5>
+            ${doc.data().name}
+            </h5>
+            <h6>
+               R${doc.data().price}
+            </h6>
+         </div>
       </div>
+   </div>
       `
       products.push(product)
     })
