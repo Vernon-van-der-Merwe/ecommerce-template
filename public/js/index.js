@@ -3,6 +3,7 @@ import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js'
 import { renderProducts } from './services/productService.js'
 import { renderUsers } from './services/userService.js'
+import { addProduct } from './services/addProduct.js'
 import * as firebase from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js'
 
 const firebaseConfig = {
